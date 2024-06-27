@@ -1,0 +1,64 @@
+.movie-container .movie-heading{
+    text-align: center;
+}
+.list-container{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+
+.list-container li{
+    background-color: rgb(102, 95, 95);
+    width: 15%;
+    height: 40vh;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 0.8s ease-in-out;
+    margin: .5%;
+}
+.list-container li:hover{
+    transform: translate3d(0,-15px,0); 
+}
+.list-container li img{
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    opacity: 0.8;
+}
+.button-container{
+    display: flex;
+    justify-content: space-around;
+}
+.top-button-cont{
+    margin-top: 5%;
+}
+.bottom-button-cont{
+    margin-top: 2%;
+}
+.button{
+    width: 40%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: white;
+    color: rgb(12, 19, 110);
+    font-family: fantasy;
+    text-align: center;
+   border-radius: 25px;
+   border: 2px solid rgb(12, 19, 110);
+}
+.button:hover{
+    background-color: rgb(12, 19, 110);
+    color: white;
+}
+.button-container .eye-icon{
+    font-size: 2rem;
+}
+.button-container a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 200;
+}

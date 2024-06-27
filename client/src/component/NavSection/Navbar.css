@@ -1,0 +1,26 @@
+.nav-conatiner{
+    background-color: blueviolet;
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    align-items:center ;
+}
+.nav-bar{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-bar li {
+    margin: 0 15px; /* Add space between list items */
+}
+
+.nav-bar li a{
+    color: white;
+    text-decoration: none;
+}
+.nav-logo-name{
+    color: antiquewhite;
+    margin-left: 2%;
+}
+
