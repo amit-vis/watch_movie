@@ -33,10 +33,6 @@ export const EditForm = () => {
     }
   }, [movie]);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
   const handleCancel = ()=>{
     setFormData({
@@ -84,7 +80,7 @@ export const EditForm = () => {
             name="title"
             placeholder="Enter title..."
             value={formData.title}
-            onChange={handleInputChange}
+            onChange={(e)=>setFormData({...formData, title: e.target.value})}
           />
 
           <label htmlFor="description">Description:</label>
@@ -94,7 +90,7 @@ export const EditForm = () => {
             name="description"
             placeholder="Enter description..."
             value={formData.description}
-            onChange={handleInputChange}
+            onChange={(e)=>setFormData({...formData, description: e.target.value})}
           />
 
           <label htmlFor="releaseYear">Release Year:</label>
@@ -104,7 +100,7 @@ export const EditForm = () => {
             name="releaseYear"
             placeholder="Enter release year..."
             value={formData.releaseyear}
-            onChange={handleInputChange}
+            onChange={(e)=>setFormData({...formData, releaseyear: e.target.value})}
           />
 
           <label htmlFor="genre">Genre:</label>
@@ -114,7 +110,7 @@ export const EditForm = () => {
             name="genre"
             placeholder="Enter genre..."
             value={formData.genre}
-            onChange={handleInputChange}
+            onChange={(e)=>setFormData({...formData, genre:e.target.value})}
           />
 
           <div className="btn-container">
