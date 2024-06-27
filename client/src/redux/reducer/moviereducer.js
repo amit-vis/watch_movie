@@ -3,7 +3,7 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 export const addMovie = createAsyncThunk("add/movie", async (movie, {rejectWithValue})=>{
     try {
         const {title, description, releaseyear, genre} = movie;
-        const response = await fetch("/movie/add", {
+        const response = await fetch("https://watch-movie-sk7b.onrender.com/movie/add", {
             method: "POST",
             headers:{
                 "Content-Type": "application/json"
@@ -29,7 +29,7 @@ export const addMovie = createAsyncThunk("add/movie", async (movie, {rejectWithV
 
 export const getMovieDetails = createAsyncThunk("/movie/get", async (_,{rejectWithValue})=>{
     try {
-        const response = await fetch("/movie/view", {
+        const response = await fetch("https://watch-movie-sk7b.onrender.com/movie/view", {
             method: "GET",
             headers:{
                "Content-Type": "application/json" 
@@ -49,7 +49,7 @@ export const getMovieDetails = createAsyncThunk("/movie/get", async (_,{rejectWi
 
 export const toggleWatchStatus = createAsyncThunk("movie/toggle", async (movieId, {rejectWithValue})=>{
     try {
-        const response = await fetch(`/movie/watch-toggle/${movieId}`,{
+        const response = await fetch(`https://watch-movie-sk7b.onrender.com/movie/watch-toggle/${movieId}`,{
             method: "PATCH",
             headers:{
                 "Content-Type": "application/json"
@@ -69,7 +69,7 @@ export const toggleWatchStatus = createAsyncThunk("movie/toggle", async (movieId
 
 export const updateDetails = createAsyncThunk("movie/update", async ({id, movie}, {rejectWithValue})=>{
     try {
-        const response = await fetch(`/movie/update/${id}`, {
+        const response = await fetch(`https://watch-movie-sk7b.onrender.com/movie/update/${id}`, {
             method: "PUT",
             headers:{
                 "Content-Type": "application/json"
@@ -90,7 +90,7 @@ export const updateDetails = createAsyncThunk("movie/update", async ({id, movie}
 
 export const getSingleData = createAsyncThunk("movie/getsingle", async (movieId, {rejectWithValue})=>{
     try {
-        const response = await fetch(`/movie/view-id/${movieId}`,{
+        const response = await fetch(`https://watch-movie-sk7b.onrender.com/movie/view-id/${movieId}`,{
             method: "GET",
             headers:{
                 "Content-Type": "application/json"
@@ -110,7 +110,7 @@ export const getSingleData = createAsyncThunk("movie/getsingle", async (movieId,
 
 export const deleteItem = createAsyncThunk("movie/delete", async (movieId, {rejectWithValue})=>{
     try {
-        const response = await fetch(`/movie/delete/${movieId}`,{
+        const response = await fetch(`https://watch-movie-sk7b.onrender.com/movie/delete/${movieId}`,{
             method: "DELETE",
             headers:{
                 "Content-Type": "application/json"

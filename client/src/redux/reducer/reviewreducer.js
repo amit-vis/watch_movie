@@ -4,7 +4,7 @@ export const createReview = createAsyncThunk(
     "review/create",
     async ({ movieId, review }, { rejectWithValue }) => {
         try {
-            const response = await fetch(`/review/create/${movieId}`, {
+            const response = await fetch(`https://watch-movie-sk7b.onrender.com/review/create/${movieId}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -30,7 +30,7 @@ export const createReview = createAsyncThunk(
 
 export const editReview = createAsyncThunk("review/edit", async ({ reviewId, review }, { rejectWithValue }) => {
     try {
-        const response = await fetch(`/review/update/${reviewId}`, {
+        const response = await fetch(`https://watch-movie-sk7b.onrender.com/review/update/${reviewId}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -51,7 +51,7 @@ export const editReview = createAsyncThunk("review/edit", async ({ reviewId, rev
 
 export const getreviewData = createAsyncThunk("review/get", async (reviewId, { rejectWithValue }) => {
     try {
-        const response = await fetch(`/review/view/${reviewId}`, {
+        const response = await fetch(`https://watch-movie-sk7b.onrender.com/review/view/${reviewId}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
