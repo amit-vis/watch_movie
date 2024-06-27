@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { getSingleData, selectedMovieSelector, toggleWatchStatus } from "../../redux/reducer/moviereducer";
 import { FaStar } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
+import { Navbar } from "../NavSection/Navbar";
 
 export const ShowDetails = () => {
     const { movieId } = useParams();
@@ -30,6 +31,7 @@ export const ShowDetails = () => {
 
     return (
         <>
+        <Navbar/>
             <h1 className="details-heading">Check Details</h1>
             {selectedMovie ? (
                 <table className="table-details">
