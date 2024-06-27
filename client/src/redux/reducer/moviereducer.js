@@ -29,7 +29,7 @@ export const addMovie = createAsyncThunk("add/movie", async (movie, {rejectWithV
 
 export const getMovieDetails = createAsyncThunk("/movie/get", async (_,{rejectWithValue})=>{
     try {
-        const response = await fetch("movie/view", {
+        const response = await fetch("/movie/view", {
             method: "GET",
             headers:{
                "Content-Type": "application/json" 
